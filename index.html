@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE-edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+      <title>RICK AND MORTY</title>
+      <link rel="stylesheet" href="./style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  </head>
+  <body>    
+    <header><!--encabezado de la pagina-->
+      <nav class="nav-bar">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo de pagina"></img>
+          <img src="img/card.png" alt="letras logo"></img>
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li id="nav-item-todos"><a href="#!" class="nav-link">Todos</a></li>
+            <li id="nav-item-mujeres"><a href="#!" class="nav-link">Mujeres</a></li>
+            <li id="nav-item-hombres"><a href="#!" class="nav-link">Hombres</a></li>
+            <li id="nav-item-sinGenero"><a href="#!" class="nav-link">S/Genero</a></li>
+            <li id="nav-item-desconocido"><a href="#!" class="nav-link">Desconocido</a></li>
+          </ul>
+          
+          
+        </div>
+
+        <div class="mobile-menu-icon"><!--boton del menu-->
+          <button onclick="menuShow()"><img class="icon" src="img/menu.png"></button>
+        </div>
+      </nav>
+
+      <div class="mobile-menu"><!--lista del menu-->
+        <ul>
+          <li id="nav-todos"><a href="#!" class="nav-link">Todos</a></li>
+          <li id="nav-mujeres"><a href="#!" class="nav-link">Mujeres</a></li>
+          <li id="nav-hombres"><a href="#!" class="nav-link">Hombres</a></li>
+          <li id="nav-sinGenero"><a href="#!" class="nav-link">S/Genero</a></li>
+          <li id="nav-desconocido"><a href="#!" class="nav-link">Desconocido</a></li>
+        </ul> 
+      </div>
+    </header>
+
+    <div class="pagination"><!-- botones-->
+      <button id="primeraPagina" class="primeraPagina pagination-button">
+        <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+      </button>
+      <button id="paginaAnterior" class="paginaAnterior pagination-button">
+        <i class="fas fa-angle-left" aria-hidden="true"></i>
+      </button>
+      <button id="proximaPagina" class="proximaPagina pagination-button">
+        <i class="fas fa-angle-right" aria-hidden="true"></i>
+      </button>
+      <button  id="ultimaPagina" class="ultimaPagina pagination-button">
+        <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <main class="container-aTodos"> <!-- contiene todo personajes, acciones, botones y mas -->
+      <div id="contenedor" class="contenedor">
+        <span class="loader"></span>
+      </div>
+      <section><p><b>Total de personajes: </b><span id="total-personajes"></span></p></section>      
+      <div id="root" class="row esconder"></div>
+    </main>
+
+
+    <!-- paginado -->
+    <div class="container-paginador">
+      <p class="resaltado">Pagina actual: <span id="pagina-actual"></span></p>
+      <p class="resaltado">Total de paginas: <span id="total-paginas"></span></p>
+    </div>
+      
+      <div class="container">
+        <div id="infoCharecters" class="row"></div>
+      </div>
+
+      <div class="pagination2"><!-- botones-->
+        <button id="primeraPagina" class="primeraPagina pagination-button">
+          <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+        </button>
+        <button id="paginaAnterior" class="paginaAnterior pagination-button">
+          <i class="fas fa-angle-left" aria-hidden="true"></i>
+        </button>
+        <button id="proximaPagina" class="proximaPagina pagination-button">
+          <i class="fas fa-angle-right" aria-hidden="true"></i>
+        </button>
+        <button  id="ultimaPagina" class="ultimaPagina pagination-button">
+          <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <footer>
+        <div id="footer_content">
+          <div class="footer_img">
+            <figure>
+              <a href="#">
+                <img src="img/footer.png" alt="logo de footer"></img>                
+              </a>
+            </figure>
+          </div>
+
+          <div class="box">
+            <h2>Sobre Nosotros</h2>
+            <p><q>Sé que esta situación puede ser intimidante. Miras a tu alrededor y 
+              todo da miedo y es diferente, pero ¿sabes qué? ... hay que encarar esas situaciones,
+               avanzar contra ellas como un toro, es así que crecemos como personas.</q></p> 
+            <hr>            
+            <P>Este es un Proyecto final del curso Front End para ADA.</P>
+          </div>
+
+          <div id="footer_social_media">
+            <h2>SIGUEME</h2>
+            <div>
+              <a href="https://github.com/licette32" class="footer-link" id="github">
+                <i class="fa-brands fa-github"></i>  
+              </a>
+
+              <a href="https://www.linkedin.com/in/beverly-j-licette-gonzalez-casanova-ab7694171/" class="footer-link" id="linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>  
+
+              <a href="https://www.instagram.com/weltbev/" class="footer-link" id="instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>              
+            </div>
+
+          </div>
+        </div>
+
+        <div id="footer_copyrigth">
+          <small>&#169
+          <b>Beverly Gonzalez Casanova</b>
+          - 2023 All rights reserved.</small>
+        </div>
+
+      </footer>
+    
+      <script src="static.js"></script>
+      <script src="app.js"></script>
+    </body>
+</html>
